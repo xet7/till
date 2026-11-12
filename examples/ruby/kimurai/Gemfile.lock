@@ -1,14 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activesupport (8.0.5.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    base64 (0.3.0)
+    benchmark (0.5.0)
+    bigdecimal (4.1.3)
     capybara (3.35.3)
       addressable
       mini_mime (>= 0.1.3)
@@ -24,14 +34,15 @@ GEM
     chronic (0.10.2)
     cliver (0.3.2)
     coderay (1.1.3)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.3.8)
     connection_pool (2.2.5)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    drb (2.2.3)
     headless (2.3.1)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
-    i18n (1.8.10)
+    i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     kimurai (1.4.0)
       activesupport
@@ -48,6 +59,7 @@ GEM
       selenium-webdriver
       thor
       whenever
+    logger (1.7.0)
     mechanize (2.7.7)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -64,7 +76,9 @@ GEM
     mime-types-data (3.2021.0704)
     mini_mime (1.1.0)
     mini_portile2 (2.6.1)
-    minitest (5.14.4)
+    minitest (6.1.0)
+      drb (~> 2.0)
+      prism (>= 1.5, < 3)
     murmurhash3 (0.1.6)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
@@ -78,6 +92,7 @@ GEM
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
+    prism (2.1.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -89,15 +104,17 @@ GEM
     rbcat (0.2.1)
     regexp_parser (2.1.1)
     rubyzip (2.3.2)
+    securerandom (0.4.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     thor (1.1.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7)
+    uri (1.1.2)
     webrick (1.7.0)
     webrobots (0.1.2)
     websocket-driver (0.7.5)
@@ -107,7 +124,6 @@ GEM
       chronic (>= 0.6.3)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
